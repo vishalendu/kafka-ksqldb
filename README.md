@@ -67,7 +67,7 @@ INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER6', 'SHIP', 
 INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER7', 'PICK', 10);
 </pre></div>
 <br>
-Query the data using a simple select query on ksqldb:
+Query the data using a simple select query on ksqldb-cli:
 <div><pre>ksql> select * from myOrder where orderType='SHIP';
 +---------+-----------+------------+
 |ORDERID  |ORDERTYPE  |ORDERLINES  |
@@ -98,7 +98,7 @@ Run the following command, and when you get a <code>></code> prompt, please ente
 docker exec -it kafka  /opt/bitnami/kafka/bin/kafka-console-producer.sh --topic order --bootstrap-server localhost:9092
 >{"ORDERID":"ORDER8","ORDERTYPE":"SHIP","ORDERLINES":55}
 </pre></div><br>
-Query the data using a simple select query on ksqldb:<br>
+Query the data using a simple select query on ksqldb-cli:<br>
 <div><pre>
 ksql> select * from myOrder where orderType='SHIP';
 +---------+-----------+------------+
