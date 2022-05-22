@@ -40,10 +40,10 @@ Pre-requisite: Please create the "order" kafka topic using the following command
 <div><pre>docker exec -it kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --topic order --bootstrap-server localhost:9092</pre></div><br>
 1. Connect to ksqldb cli (if all containers are up), to open kqsldb-cli run the following:<br>
   <div><pre>docker exec -it ksqldb-cli ksql http://ksqldb-server:8088</pre></div>
-2. Create ksqldb stream:<br>
+2. Create ksqldb stream:(enter the following on ksql> prompt from ksqldb-cli)<br>
   <div><pre>CREATE STREAM orderstr (orderId VARCHAR, orderType VARCHAR, orderLines INT)
     WITH (kafka_topic='order', value_format='json', partitions=1);</pre></div>
-3. Create Materialized View:<br>
+3. Create Materialized View:(enter the following on ksql> prompt from ksqldb-cli)<br>
   <div><pre>
   CREATE TABLE myorder AS
   SELECT orderId,
