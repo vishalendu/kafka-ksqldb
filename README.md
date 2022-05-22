@@ -22,7 +22,17 @@ Nothing too revolutionary being done here, but this gives an idea about how simp
   Use command <code>docker-compose down</code> to bring down the setup<br>
 <br>(If you dont have docker-compose already installed, please refer to : https://docs.docker.com/compose/install/)<br>
 (Please run <code>docker ps</code> command to check all containers are up and running)
-
+<br><div><pre>
+docker ps
+CONTAINER ID   IMAGE                               COMMAND                  CREATED       STATUS       PORTS                                                  NAMES
+539a0c5cc251   confluentinc/ksqldb-cli:0.26.0      "/bin/sh"                3 hours ago   Up 3 hours                                                          ksqldb-cli
+2c5318504dc1   confluentinc/ksqldb-server:0.26.0   "/usr/bin/docker/run"    3 hours ago   Up 3 hours   0.0.0.0:8088->8088/tcp                                 ksqldb-server
+fd12a10c6bb6   bitnami/kafka:latest                "/opt/bitnami/script…"   3 hours ago   Up 3 hours   0.0.0.0:9092->9092/tcp                                 kafka
+3f56f8110d9e   bitnami/zookeeper:latest            "/opt/bitnami/script…"   3 hours ago   Up 3 hours   2888/tcp, 3888/tcp, 0.0.0.0:2181->2181/tcp, 8080/tcp   zookeeper
+</pre></div>
+<br>
+<blockquote> I have used bitnami images for kafka/zookeeper to show that ksqldb works with images outside confluentinc</blockquote>
+  
 <br><br>
 <h3>STEP 2: Create ksqldb Stream and Materialized Views</h3><hr>
 <br>
