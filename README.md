@@ -17,7 +17,9 @@ Nothing too revolutionary being done here, but this gives an idea about how simp
 <br>
 - Please use the provided docker-compose.yaml file to bring up the complete setup.<br>
 - If you already have an existing Zookeeper/Kafka setup, you can remove them from the docker-compose.yaml file and provide the Kafka broker URL inside ksqldb-server's environment configuration (change <code>"KSQL_BOOTSTRAP_SERVERS: kafka:9092"</code> to point to your kafka broker)
-
+<br><br>
+  Use command <code>docker-compose up -d</code> to bring up the setup<br>
+  Use command <code>docker-compose down</code> to bring down the setup<br>
 <br>(If you dont have docker-compose already installed, please refer to : https://docs.docker.com/compose/install/)<br>
 (Please run <code>docker ps</code> command to check all containers are up and running)
 
