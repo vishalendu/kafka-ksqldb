@@ -102,7 +102,7 @@ ksql> select * from myOrder where orderType='SHIP';
 <br>
 Query the data using kafka console consumer:
 <div><pre>
-docker exec -it kaf/opt/bitnami/kafka/bin/kafka-console-consumer.sh --topic order --bootstrap-server localhost:9092 --from-beginning
+docker exec -it kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --topic order --bootstrap-server localhost:9092 --from-beginning
 {"ORDERID":"ORDER1","ORDERTYPE":"SHIP","ORDERLINES":29}
 {"ORDERID":"ORDER2","ORDERTYPE":"PICK","ORDERLINES":100}
 {"ORDERID":"ORDER3","ORDERTYPE":"SHIP","ORDERLINES":40}
