@@ -44,15 +44,15 @@ Pre-requisite: Please create the "order" kafka topic using the following command
 <br><br>
 <h3>STEP 3: Inserting data through ksqldb Stream and viewing through select query on Materialized Views</h3><hr>
 <br>  
-Please use the following data to insert multiple records using ksldb-cli command prompt:<br>
+Please use the following data to insert multiple records using ksldb-cli command prompt:(enter these on ksql> prompt)<br>
 <div><pre>
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER1', 'SHIP', 29);
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER2', 'PICK', 100);
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER3', 'SHIP', 40);
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER4', 'SHIP', 120);
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER5', 'PICK', 50);
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER6', 'SHIP', 90);
-ksql>INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER7', 'PICK', 10);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER1', 'SHIP', 29);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER2', 'PICK', 100);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER3', 'SHIP', 40);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER4', 'SHIP', 120);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER5', 'PICK', 50);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER6', 'SHIP', 90);
+INSERT INTO orderstr (orderId, orderType, orderLines) VALUES ('ORDER7', 'PICK', 10);
 </pre></div>
 <br>
 Query the data using a simple select query on ksqldb:
